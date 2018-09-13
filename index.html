@@ -7,9 +7,9 @@
     <link href="jquery/jquery-ui-1.11.4/cupertino/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
-    <script src="jquery/jquery-1.12.3.min.js"></script>
-    <script src="jquery/jquery-ui-1.11.4/jquery-ui.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="jquery/jquery-1.12.3.min.js" rel="script" type="text/javascript"></script>
+    <script src="jquery/jquery-ui-1.11.4/jquery-ui.min.js" rel="script" type="text/javascript"></script>
+    <script src="js/script.js" rel="script" type="text/javascript"></script>
 </head>
 <body>
     <nav class="nav">
@@ -18,23 +18,25 @@
         </div>
     </nav>
 
-    <div class="card-area">
-        <div class="title-form">
-            <form>
-                <div id="form-input">
-                    <input type="text" placeholder="Enter list title" />
-                </div>
-                <div id="form-button">
-                    <input type="button" value="Add List" />
-                    <input type="button" value="X" />
-                </div>
-            </form>
+    <div id="container">
+        <div class="card-area">
+            <div class="title-form">
+                <form>
+                    <div id="form-input">
+                        <input type="text" placeholder="Enter list title" id="input-value"/>
+                    </div>
+                    <div id="form-button">
+                        <input type="button" value="Add List" id="ok-btn"/>
+                        <input type="button" value="X" id="cancel-btn"/>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class="card-area">
-        <div class="add-list">
-            <input type="button" value="+Add a list" class="addBtn" />
+        <div class="card-area">
+            <div class="add-list">
+                <input type="button" value="+Add a list" class="add-btn" />
+            </div>
         </div>
     </div>
 </body>

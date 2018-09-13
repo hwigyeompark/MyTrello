@@ -23,8 +23,9 @@ a{
         font-size: 1.3em;
     }
 
-#wrap{
-    width: 100%;
+.card-area{
+    width: 30%;
+    display: inline-block;
 }
 .add-list{
     margin-top: 0.5%;

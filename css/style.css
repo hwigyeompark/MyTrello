@@ -56,3 +56,32 @@ a{
     .list-add-btn:hover{
         cursor: pointer;
     }
+
+.list-form{
+    background: #e0e0e0;
+    border-radius: 5px;
+    padding: 5%;
+}
+.w100{
+    width: 100%;
+    overflow: hidden;
+}
+.list-title{
+    max-width: calc(100% - 35px);
+    display: inline-block;
+    color: #555;
+    overflow: hidden;
+    font-size: 1.2em;
+}
+.delete-btn{
+    float: right;
+}
+.picview-btn{
+    background-color: #3333;
+    border: none;
+    padding:3%;
+    border-radius: 5px;
+}
+.card-add-btn{
+    margin-top: 2%;
+}

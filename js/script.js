@@ -249,7 +249,7 @@ $(function () {
 
 
 
-                    var div = '<div class="list-form">\n' +
+                    var div = '<div class="card">\n' +
                                 '<div class="w100">\n' +
                                     '<span class="title">'+title+'</span>\n' +
                                     '<input type="button" value="X" class="delete-btn">\n' +
@@ -259,7 +259,7 @@ $(function () {
 
                     /*카드추가*/
                     $(th).parent().find(".card-list").append(div);
-                    $(th).parent().find(".list-form").eq(-1).hide().show("fade", 1000,function () {
+                    $(th).parent().find(".card").eq(-1).hide().show("fade", 1000,function () {
                         sort_ok();
                         local();
                     });
@@ -283,6 +283,38 @@ $(function () {
                     $(this).remove();
                 }
             }
+        });
+    }
+
+    function viewPicSlide(th){
+        var div = "<div id='photoViewBg'>";
+
+        div += "<div id='photoViewImage'>";
+        div += "<img src='image/basic.jpg' alt='카드명' title='카드명'>";
+        div += "</div>";
+
+        div += "<select id='photoViewSel'>";
+        div += "<option>Bounce</option>";
+        div += "<option>Fade</option>";
+        div += "<option>Flip</option>";
+        div += "</select>";
+
+        div += "<input type='button' value='X' class='btn' id='close-btn'>";
+        div += "<input type='button' value='<' class='' id='prev-btn'>";
+        div += "<input type='button' value='>' class='' id='next-btn'>";
+
+        div += "<ul id='photoViewPos'>";
+        div += "<li></li>";
+        div += "<li></li>";
+        div += "<li></li>";
+        div += "</ul>";
+
+        div += "</div>";
+
+        $("body").prepend($(div));
+
+        $("#close-btn").on("click", function (){
+            $("#photoViewBg").remove();
         });
     }
 });

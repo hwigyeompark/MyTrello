@@ -11,6 +11,7 @@ a{
 .nav{
     width: 100%;
     height: 50px;
+    display: none;
 }
 
 .nav-header{
@@ -84,4 +85,16 @@ a{
 }
 .card-add-btn{
     margin-top: 2%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control{
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
 }

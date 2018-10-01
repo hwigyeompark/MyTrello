@@ -6,26 +6,26 @@ $(function () {
         $("#container").html(localStorage['page']);
     }
 
-    $(".wrap").eq(-2).hide();
-    $(document).on("click", ".btn-tour-add", function () { //+Add a list 버튼 클릭시
-        $(this).parent().hide(); //이것의 부모 == 즉 +Add a list 공간자체를 숨김
-        $(".wrap").eq(-2).show(); //추가 폼은 보이게
+    $(".card-wrap").eq(-2).hide(); //관광지 추가 폼 사라지게
+    $(document).on("click", ".btn-tour-add", function () { //관광지 추가 버튼 클릭 시
+        $(this).parent().hide(); //이것의 부모 == 즉 추가 버튼 공간자체를 숨김
+        $(".card-wrap").eq(-2).show(); //관광지 추가 폼은 보이게
     })
 
-    $(document).on("click", "#cancelBtn", function () { //추가 폼 안에 있는 Cancel버튼 클릭 시
-        $(".wrap").eq(-2).hide(); //추가 폼은 숨기고
-        $(".wrap").eq(-2).find(".form-control").val(''); //추가 폼 경로 내에 있는 폼 컨트롤 == input text 값 삭제
-        $(".wrap").eq(-1).show(); // +Add a list 버튼 보이게
+    $(document).on("click", "#cancelBtn", function () { //관광지 추가 폼 안에 있는 취소버튼 클릭 시
+        $(".card-wrap").eq(-2).hide(); //관광지 추가 폼은 숨기고
+        $(".card-wrap").eq(-2).find(".form-control").val(''); //관광지 추가 폼 경로 내에 있는 폼 컨트롤 == input text 값 삭제
+        $(".card-wrap").eq(-1).show(); //$(".card-wrap").eq(-1) == 관광지 추가 버튼 보이게
     })
 
-    $(document).on("click", "#okBtn", function () { //추가 폼 안에 있는 Add list 버튼 클릭 시
-        var val = $(".wrap").eq(-2).find(".form-control").val();
+    $(document).on("click", "#okBtn", function () { //관광지 추가 폼 안에 있는 완료버튼 클릭 시
+        var val = $(".card-wrap").eq(-2).find(".form-control").val();
 
-        if ($(".wrap").eq(-2).find(".form-control").val() == ""){
+        if ($(".card-wrap").eq(-2).find(".form-control").val() == ""){
             alert("관광지명을 입력하여주세요.");
         }
         else {
-            var card = '<div class="wrap">\n' +
+            var card = '<div class="card-wrap">\n' +
                 '            <div>\n' +
                 '                <div class="w100">\n' +
                 '                    <span class="title tour-title">' + val + '</span>\n' +
@@ -36,24 +36,26 @@ $(function () {
                 '                </div>\n' +
                 '\n' +
                 '<div class="cardList" style="padding : 5px 0;"></div>' +
-                '                <input type="button" value="+Add a card" class="btn btn-primary btn-card-add" onclick="openPopupAddCard(this);">\n' +
+                '                <input type="button" value="카드 추가" class="btn btn-primary btn-card-add" onclick="openPopupAddCard(this);">\n' +
                 '            </div>\n' +
                 '        </div>';
 
             $("#container").prepend(card);
-            $(".wrap").eq(0).hide().show("fade", 1000, function () {
+            $(".card-wrap").eq(0).hide().show("fade", 1000, function () {
                 local();
-            }); //추가 폼 나타남.
+            }); //관광지 추가 폼 나타남.
 
-            $(".wrap").eq(-2).hide(); //추가 폼은 숨기고
-            $(".wrap").eq(-2).find(".form-control").val(''); // 추가 폼 경로 내에 있는 폼 컨트롤 == input text 값 삭제
-            $(".wrap").eq(-1).show(); //+Add a list 버튼 보이게
+            $(".card-wrap").eq(-2).hide(); //관광지 추가 폼은 숨기고
+            $(".card-wrap").eq(-2).find(".form-control").val(''); //관광지 추가 폼 경로 내에 있는 폼 컨트롤 == input text 값 삭제
+            $(".card-wrap").eq(-1).show(); //$(".card-wrap").eq(-1) == 관광지 추가 버튼 보이게
 
 
 
         }
     });
 
+
+    /*관광지 카드*/
     img_chk = true;
     brush_chk = false;
     line_chk = false;
@@ -318,7 +320,7 @@ function viewPhotoSlide(th){
     var div = "<div id='photoViewBg'>";
 
     div += "<div id='photoViewImage'>";
-    div += "<img src='image/basic.jpg' alt='카드명' title='카드명'>";
+    div += "<img src='images/1.jpg' alt='카드명' title='카드명'>";
     div += "</div>";
 
     div += "<select id='photoViewSel'>";

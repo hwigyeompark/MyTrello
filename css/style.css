@@ -20,7 +20,7 @@ body{
     vertical-align: top;
 }
 
-.wrap{
+.card-wrap{
     width: 270px;
     height: calc(100vh - 80px);
     display: inline-block;
@@ -28,7 +28,7 @@ body{
     position: relative;
     float: left;
 }
-.wrap > div{
+.card-wrap > div{
     width: 100%;
     height: auto;
     overflow-y: auto;
@@ -157,6 +157,7 @@ input[type="button"].active{
 #prev_btn{
     border:none;
     background-color: transparent;
+    font-family: "Malgun Gothic";
     font-size:200px;
     font-weight: bold;
     color: white;
@@ -169,6 +170,7 @@ input[type="button"].active{
 #next_btn{
     border:none;
     background-color: transparent;
+    font-family: "Malgun Gothic";
     font-size:200px;
     font-weight: bold;
     color: white;
